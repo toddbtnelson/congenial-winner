@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: 21312ebdb360dba49b564099ba2bbdaa
+  - enabled: 1
+    path: Assets/Scenes/GameOverSceen.unity
+    guid: e9c9391d2fcced647a75c3e230aa7cce
+  - enabled: 1
+    path: Assets/Scenes/LevelScreen.unity
+    guid: ab1bbabd028e40c48801857498004670
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: ca3e30fafe816954aaf986a856a38e1b
   m_configObjects: {}
