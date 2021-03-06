@@ -338,7 +338,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 661057201}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.666}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60.96798}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
@@ -494,7 +494,7 @@ RectTransform:
   - {fileID: 543288646}
   m_Father: {fileID: 523820946}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -241.14114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -356.359}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4.5, y: 0.5}
@@ -511,7 +511,6 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 183228abf9d5beb49894269f1dbb2465, type: 2}
   m_Animations:
-  - {fileID: 0}
   - {fileID: 7400000, guid: 183228abf9d5beb49894269f1dbb2465, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -1181,7 +1180,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -1734,7 +1733,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 12
     size3D: 0
     rotation3D: 0
     gravityModifier:
