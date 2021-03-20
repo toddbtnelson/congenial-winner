@@ -533,14 +533,16 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.IntAdd
+        - HutongGames.PlayMaker.Actions.IntOperator
         - HutongGames.PlayMaker.Actions.UiTextSetText
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 603dd90509fbab04
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000008000000
+        actionHashCodes: 603dd9051418090309fbab04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -582,7 +584,25 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 2
+        - useVariable: 1
+          name: score
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        - useVariable: 1
+          name: score
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -596,22 +616,27 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000
+        byteData: 00030000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000000100000014000000120000001100000001000000
+        paramDataType: 100000001000000001000000100000001000000007000000100000000100000014000000120000001100000001000000
         paramName:
         - intVariable
         - add
+        - everyFrame
+        - integer1
+        - integer2
+        - operation
+        - storeResult
         - everyFrame
         - gameObject
         - text
         - resetOnExit
         - everyFrame
-        paramDataPos: 00000000010000000000000000000000000000000000000001000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000020000000300000001000000040000000500000000000000000000000000000006000000
+        paramByteDataSize: 000000000000000001000000000000000000000004000000000000000100000000000000000000000000000001000000
     events:
     - name: TRIGGER EXIT 2D
       isSystemEvent: 1
