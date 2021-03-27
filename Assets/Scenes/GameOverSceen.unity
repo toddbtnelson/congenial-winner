@@ -216,6 +216,7 @@ RectTransform:
   - {fileID: 2031298086}
   - {fileID: 1234786449}
   - {fileID: 1053995637}
+  - {fileID: 356976412}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -302,6 +303,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247438386}
   m_CullTransparentMesh: 0
+--- !u!1 &356976409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356976412}
+  - component: {fileID: 356976411}
+  - component: {fileID: 356976410}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &356976410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356976409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 125
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 129
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &356976411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356976409}
+  m_CullTransparentMesh: 0
+--- !u!224 &356976412
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356976409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 124262078}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.9, y: -48.7}
+  m_SizeDelta: {x: 444.97, y: 292.6}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &573197604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1207,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 60.195312
+        x: 65.19531
         y: 108.66406
         width: 162.8
         height: 32
@@ -1140,7 +1219,7 @@ MonoBehaviour:
           name: 'greaterthanhighscore '
           isSystemEvent: 0
           isGlobal: 0
-        toState: score
+        toState: showScore
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1148,22 +1227,38 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.IntCompare
+        - HutongGames.PlayMaker.Actions.UiTextSetText
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 09faa102
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000006000000
+        actionHashCodes: 09faa10209fbab04
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 356976409}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: highscore
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1182,7 +1277,13 @@ MonoBehaviour:
           showInInspector: 1
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -1192,12 +1293,12 @@ MonoBehaviour:
         - 
         - 
         - 'greaterthanhighscore '
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000001000000017000000170000001700000001000000
+        paramDataType: 10000000100000001700000017000000170000000100000014000000120000001100000001000000
         paramName:
         - integer1
         - integer2
@@ -1205,16 +1306,20 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000100000000000000010000000200000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
+        - gameObject
+        - text
+        - resetOnExit
+        - everyFrame
+        paramDataPos: 00000000010000000000000001000000020000000000000000000000000000000000000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: State 2
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 60.90625
-        y: 351.53906
-        width: 126
+        y: 399.53906
+        width: 127.6
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -1295,108 +1400,13 @@ MonoBehaviour:
         - failureEvent
         paramDataPos: 00000000000000000000000000000000000000000000000001000000
         paramByteDataSize: 04000000000000000000000000000000000000000000000000000000
-    - name: 'highscore '
+    - name: showScore
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 362
-        y: 290
-        width: 100
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetIntValue
-        - HutongGames.PlayMaker.Actions.UiTextSetText
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 603dd90509fbab04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 573197604}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: score
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams:
-        - useVariable: 1
-          name: 'highscore '
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 'score '
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 10000000100000000100000014000000120000001100000001000000
-        paramName:
-        - intVariable
-        - intValue
-        - everyFrame
-        - gameObject
-        - text
-        - resetOnExit
-        - everyFrame
-        paramDataPos: 00000000010000000000000000000000000000000000000001000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000001000000
-    - name: score
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 337.0078
-        y: 141
+        x: 274
+        y: 167
         width: 100
         height: 16
       isBreakpoint: 0
@@ -1422,7 +1432,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: {fileID: 573197604}
+            value: {fileID: 356976409}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
